@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/landing.css">
+    <title>Drag & Drop Cube</title>
+</head>
+<body>
+    <div class="container">
+        <table class="cardboard">
+            <tr>
+                <td></td>
+                <td></td>
+                <td class="drop-area" id="top-drop"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="drop-area" id="left-drop"></td>
+                <td class="drop-area" id="middle-drop"></td>
+                <td class="drop-area" id="right-drop"></td>
+                <td class="drop-area" id="bottom-drop"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td class="drop-area" id="center-drop"></td>
+                <td></td>
+            </tr>
+        </table>
+        <div class="face-cubes">
+            <div class="face cardboard-face" id="1-cardboard" draggable="true">1</div>
+            <div class="face cardboard-face" id="2-cardboard" draggable="true">2</div>
+            <div class="face cardboard-face" id="3-cardboard" draggable="true">3</div>
+            <div class="face cardboard-face" id="4-cardboard" draggable="true">4</div>
+            <div class="face cardboard-face" id="5-cardboard" draggable="true">5</div>
+            <div class="face cardboard-face" id="6-cardboard" draggable="true">6</div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

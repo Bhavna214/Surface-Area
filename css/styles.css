@@ -1,0 +1,67 @@
+body, html{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cardboard {
+    border-collapse: collapse;
+    background-color: transparent; 
+    border: none;
+}
+
+.cardboard td {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+.face-cubes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.face {
+    width: 100px;
+    height: 100px;
+    background-color: #a1e2fd; 
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.drop-area {
+    background-color: rgba(255, 255, 255, 0.4); 
+    border: 2px dashed white; 
+    cursor: pointer;
+}
+
+.drop-area.filled {
+    background-color: #a1e2fd;
+    border: none;
+}
+
+@keyframes rotateCube {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}

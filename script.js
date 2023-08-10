@@ -25,13 +25,11 @@ dropAreas.forEach(dropArea => {
         e.preventDefault();
         const droppedNumber = e.dataTransfer.getData('text/plain');
         const dropId = dropArea.id.replace('-drop', '');
-
         if (!cubePlaced[dropId]) {
             cubePlaced[dropId] = true;
             dropArea.textContent = droppedNumber;
             dropArea.classList.add('filled');
-        
-            const correspondingCardboardFace = document.getElementById(dropId + '-cardboard');
+            const correspondingCardboardFace = document.getElementById(droppedNumber + '-cardboard');
             correspondingCardboardFace.style.display = 'none';
         
             checkCompletion();

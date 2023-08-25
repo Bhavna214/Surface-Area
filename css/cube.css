@@ -100,7 +100,18 @@ input{
     cursor: pointer;
     position: absolute;
     top: -100px;
-    left: 175px;
+    left: 50px;
+}
+#retry{
+    height: 50px;
+    width: 100px;
+    background-color: #a1e2fd;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: -100px;
+    left: 275px;
 }
 
 input:focus~ .box #front{

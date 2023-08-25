@@ -42,7 +42,11 @@ function checkCompletion() {
     const allPlaced = Object.values(cubePlaced).every(value => value === true);
     if (allPlaced) {
         const cardboard = document.querySelector('.cardboard');
-        cardboard.style.animation = 'rotateCube 5s linear infinite';
+        // cardboard.style.animation = 'rotateCube 5s linear infinite';
+
+        cardboard.style.display = 'none';
+        const cube = document.querySelector('.box');
+        cube.style.display = 'flex';
     }
 }
 

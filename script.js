@@ -47,6 +47,7 @@ function checkCompletion() {
         cardboard.style.display = 'none';
         const cube = document.querySelector('.box');
         cube.style.display = 'flex';
+        document.getElementById("derivation_box").style.display="flex";
     }
 }
 

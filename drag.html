@@ -21,10 +21,13 @@
             </div>
             <p class="instruct_p">Therefore, the area of the square = </p>
             <input class="derivationTA" type="text" id="area">
-            <p class="instruct_p areaFormula" style="display: none;">
+            <p class="instruct_p" id="areaFormula" style="display: none;">
                 Area entered is wrong!<br>
                 Area = side*side
             </p>
+            <!-- <button onclick="checkarea()">
+                Check
+            </button> -->
         </div>
         
     </div>
@@ -70,15 +73,16 @@
     <script src="script.js"></script>
 </body>
 <script>
-    var areaInput = document.getElementById("area");
-    var sideInput = document.getElementById("sideValue")
     function checkarea() {
-        if (area = sideValue*sideValue){
+        var areaValue = parseFloat(area.value); // Parse the value to a number
+        var sideInput = parseFloat(sideValue.value); // Parse the value to a number
+        
+        if (!isNaN(areaValue) && areaValue === sideInput * sideInput) {
             location.href = "derivation.html";
-        }else{
+        } else {
             document.getElementById('areaFormula').style.display = 'flex';
         }
     }
-    areaInput.addEventListener("input", checkarea);    
+    area.addEventListener("input", checkarea);    
 </script>
 </html>

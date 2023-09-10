@@ -46,6 +46,17 @@ body, html{
     cursor: pointer;
 }
 
+.dropped-face{
+    width: 100px;
+    height: 100px;
+    background-color: #a1e2fd; 
+    border: 1px solid #333;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 .drop-area {
     background-color: rgba(255, 255, 255, 0.4); 
     border: 2px dashed white; 

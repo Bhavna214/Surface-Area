@@ -143,10 +143,11 @@ a:hover span:nth-child(4) {
     align-items: center;
     justify-content: center;
     width: 40%;
-    height: 20%;
+    height: fit-content;
     margin-top: 2rem;
     display: none;
 }
+
 #popup{
     margin: 0 0 0 50rem;
     right: 0px;
@@ -189,3 +190,40 @@ a:hover span:nth-child(4) {
     top: 0px;
     margin: 0 50rem 25rem 0;
 }
+
+.line{
+    position: relative;
+    width: 100%;
+    /* border-right: 2px solid white; */
+    /* white-space: nowrap; */
+    overflow: hidden;
+    transform: translateY(-50%);
+    font-size: 1.45rem;
+    margin:0;
+    margin-top: 2rem;
+    /* color: #f0e969; */
+  }
+
+  .anim-typewriter{
+  animation: typewriter 10s steps(40) 1s 1 normal both
+  blinkTextCursor 500ms steps(40) infinite normal;
+
+}
+
+@keyframes typewriter{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+  }
+  
+  @keyframes blinkTextCursor{
+    from{
+        border-right-color: rgba(255, 255, 255, 1);
+    }
+    to{
+        border-right-color: transparent;
+    }
+  }

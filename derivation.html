@@ -9,20 +9,16 @@
     <title>Drag & Drop Cube</title>
 </head>
 <body>
-    <div class="popup" id="derivation_box">
+    <div class="popup" id="derivation_box" style="display: flex;">
         <div class="character">
             <img src="./images/character.png" alt="">
         </div>
         <div id="instruct">
             <p class="instruct_p"><br>Let's derive the formula for the surface area<br></p>
-            <p class="instruct_p">Enter the length of a side of a face :</p>
-            <input type="text" id="sideValue">
-            <p class="instruct_p">Therefore, the area of the square = </p>
-            <input type="text" id="area">
-            <p class="instruct_p areaFormula" style="display: none;">
-                Area entered is wrong!<br>
-                Area = side*side
-            </p>
+            <p class="instruct_p"><br>Surface area of cube = sum of area of all faces<br></p>
+            <p class="instruct_p"> = a + a.... = a * 6</p>
+            <p class="instruct_p">= a2 * 6</p>
+            <p class="instruct_p">Therefore, surface area of the cube= a2 * 6</p>
         </div>
         
     </div>
@@ -31,52 +27,24 @@
             <tr>
                 <td></td>
                 <td></td>
-                <td class="drop-area" id="top-drop"></td>
+                <td class="face cardboard-face" id="top-drop"></td>
                 <td></td>
             </tr>
             <tr>
-                <td class="drop-area" id="left-drop"></td>
-                <td class="drop-area" id="middle-drop"></td>
-                <td class="drop-area" id="right-drop"></td>
-                <td class="drop-area" id="bottom-drop"></td>
+                <td class="face cardboard-face" id="left-drop"></td>
+                <td class="dropped-face" id="middle-drop"></td>
+                <td class="face cardboard-face" id="right-drop"></td>
+                <td class="dropped-face" id="bottom-drop"></td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
-                <td class="drop-area" id="center-drop"></td>
+                <td class="face cardboard-face" id="center-drop"></td>
                 <td></td>
             </tr>
         </table>
-        <div class="face-cubes">
-            <div class="face cardboard-face" id="1-cardboard" draggable="true">1</div>
-            <div class="face cardboard-face" id="2-cardboard" draggable="true">2</div>
-            <div class="face cardboard-face" id="3-cardboard" draggable="true">3</div>
-            <div class="face cardboard-face" id="4-cardboard" draggable="true">4</div>
-            <div class="face cardboard-face" id="5-cardboard" draggable="true">5</div>
-            <div class="face cardboard-face" id="6-cardboard" draggable="true">6</div>
-        </div>
-        <div class="box" style="display: none;">
-            <div class="card" id="front">1</div>
-            <div class="card" id="back">2</div>
-            <div class="card" id="left">3</div>
-            <div class="card" id="right">4</div>
-            <div class="card" id="top">5</div>
-            <div class="card" id="bottom">6</div>
-        </div>
     </div>
     
     <script src="script.js"></script>
 </body>
-<script>
-    var areaInput = document.getElementById("area");
-    var sideInput = document.getElementById("sideValue")
-    function checkarea() {
-        if (area = sideValue*sideValue){
-            location.href = "derivation.html";
-        }else{
-            document.getElementById('areaFormula').style.display = 'flex';
-        }
-    }
-    areaInput.addEventListener("input", checkarea);    
-</script>
 </html>

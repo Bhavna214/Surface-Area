@@ -91,17 +91,20 @@ body{
     transform: rotateX(-90deg);
 }
 
-input{
+input {
     height: 50px;
     width: 100px;
     background-color: #a1e2fd;
     border: none;
     font-size: 22px;
     cursor: pointer;
-    position: absolute;
-    top: -100px;
-    left: 50px;
+    position: relative; /* Change from absolute to relative */
+    top: 0; /* Remove top offset */
+    left: 0; /* Remove left offset */
+    margin-top: 20px; /* Adjust margin-top as needed to create space */
+    z-index: 1; /* Ensure the input is below the popup content */
 }
+
 #retry{
     height: 50px;
     width: 100px;

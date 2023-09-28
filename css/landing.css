@@ -27,12 +27,13 @@ body{
     color: #a1e2fd;
 }
 
-/* input{
+input{
     padding: 1rem;
     font-size: 1.5rem;
     text-align: center;
     font-weight: bold;
-} */
+}
+
 .derivationTA{
     /* padding: 1rem; */
     font-size: 1rem;
@@ -142,16 +143,16 @@ a:hover span:nth-child(4) {
     transition-delay: 0.75s;
 }
 
-.popup{
-    padding: 1rem;
-    border-radius: 1rem;
+.popup {
+    padding: 1rem; /* Reduce padding */
+    border-radius: 0.5rem; /* Reduce border-radius */
     background: rgba(161, 226, 253, 0.7);
     box-shadow: 0 0 10px #0f8088, 0 0 10px #a1e2fd, 0 0 20px #a1e2fd;
     border: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: fit-content;
+    width: 30%;
     height: fit-content;
     margin-top: 2rem;
     position: absolute;
@@ -160,20 +161,20 @@ a:hover span:nth-child(4) {
 
 #popup{
     margin: 0 0 0 50rem;
-    right: 0px;
-    bottom: 0px;
+    right: 3%;
+    bottom: 10%;
 }
 
 .popup .instruct_p{
     width: 100%;
-    font-weight: 400;
+    font-weight: 500;
     font-size: large;
     text-align: left;
 }
 
 .popup .character{
     text-align: right;
-    width: 35%;
+    width: 55%;
 }
 
 .popup .character img{
@@ -200,10 +201,9 @@ a:hover span:nth-child(4) {
 }
 
 #derivation_box{
-    left: 0px;
-    top: 0px;
-    margin: 0 50rem 25rem 0;
-    
+    left: 3%;
+    top: 5%;
+    margin: 0 50rem 25rem 0;    
 }
 
 .line{

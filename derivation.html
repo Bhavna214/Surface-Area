@@ -27,19 +27,19 @@
             <tr>
                 <td></td>
                 <td></td>
-                <td class="face cardboard-face" id="top-drop"></td>
+                <td class="face cardboard-face num" id="top-drop"></td>
                 <td></td>
             </tr>
             <tr>
-                <td class="face cardboard-face" id="left-drop"></td>
-                <td class="dropped-face" id="middle-drop"></td>
-                <td class="face cardboard-face" id="right-drop"></td>
-                <td class="dropped-face" id="bottom-drop"></td>
+                <td class="face cardboard-face num" id="left-drop"></td>
+                <td class="dropped-face num" id="middle-drop"></td>
+                <td class="face cardboard-face num" id="right-drop"></td>
+                <td class="dropped-face num" id="bottom-drop"></td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
-                <td class="face cardboard-face" id="center-drop"></td>
+                <td class="face cardboard-face num" id="center-drop"></td>
                 <td></td>
             </tr>
         </table>
@@ -48,3 +48,18 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+<script>
+    window.onload = function () {
+    var squaredValue = localStorage.getItem('squaredValue');
+    if (squaredValue) {
+        var faceCubes = document.querySelectorAll('.num');
+        faceCubes.forEach(function (element) {
+            var squaredDiv = document.createElement('div');
+            squaredDiv.textContent = squaredValue;
+            element.appendChild(squaredDiv);
+        });
+    }
+    localStorage.removeItem('squaredValue'); 
+};
+</script>

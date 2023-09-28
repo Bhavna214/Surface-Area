@@ -73,16 +73,25 @@
     <script src="script.js"></script>
 </body>
 <script>
+    function storeAndRedirect() {
+        var inputValue = document.getElementById('sideValue').value;
+        var squaredValue = parseFloat(inputValue) * parseFloat(inputValue);
+        localStorage.setItem('squaredValue', squaredValue);
+        console.log('Squared value stored in local storage:', squaredValue); // Add this line to log the squared value
+        location.href = "derivation.html";
+    } 
+
     function checkarea() {
         var areaValue = parseFloat(area.value); // Parse the value to a number
         var sideInput = parseFloat(sideValue.value); // Parse the value to a number
         
         if (!isNaN(areaValue) && areaValue === sideInput * sideInput) {
             location.href = "derivation.html";
+            storeAndRedirect();
         } else {
             document.getElementById('areaFormula').style.display = 'flex';
         }
     }
-    area.addEventListener("input", checkarea);    
+    area.addEventListener("input", checkarea); 
 </script>
 </html>

@@ -156,7 +156,7 @@ a:hover span:nth-child(4) {
     height: fit-content;
     margin-top: 2rem;
     position: absolute;
-    /* display: none; */
+    display:none;
 }
 
 #popup{

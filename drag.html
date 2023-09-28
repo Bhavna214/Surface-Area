@@ -77,6 +77,7 @@
         var inputValue = document.getElementById('sideValue').value;
         var squaredValue = parseFloat(inputValue) * parseFloat(inputValue);
         localStorage.setItem('squaredValue', squaredValue);
+        localStorage.setItem('sideValue', inputValue)
         console.log('Squared value stored in local storage:', squaredValue); // Add this line to log the squared value
         location.href = "derivation.html";
     } 

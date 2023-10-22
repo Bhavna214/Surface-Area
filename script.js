@@ -62,3 +62,4 @@ function updateRemainingFaces(droppedId) {
         }
     });
 }
+

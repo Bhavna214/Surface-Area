@@ -22,8 +22,8 @@ body, html{
 }
 
 .cardboard td {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     text-align: center;
     vertical-align: middle;
     position: relative;

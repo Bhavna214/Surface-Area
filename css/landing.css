@@ -165,22 +165,26 @@ a:hover span:nth-child(4) {
     bottom: 10%;
 }
 
-.popup .instruct_p{
+.instruct_p, #instruct_p{
     width: 100%;
     font-weight: 500;
-    font-size: large;
+    font-size: x-large;
     text-align: left;
 }
 
 .popup .character{
     text-align: right;
-    width: 55%;
+    width: 50%;
 }
 
 .popup .character img{
     width: 100%;
     right:0px;
     text-align: right;
+}
+
+#instruct{
+    width:50%;
 }
 
 .Instruct{
@@ -201,9 +205,9 @@ a:hover span:nth-child(4) {
 }
 
 #derivation_box{
-    left: 3%;
-    top: 5%;
-    margin: 0 50rem 25rem 0;    
+    right: 3%;
+    bottom: 5%;
+    /* margin: 0 50rem 25rem 0;     */
 }
 
 #before_derivation_box{
@@ -214,9 +218,9 @@ a:hover span:nth-child(4) {
     display: flex; 
 }
 #cube_count{
-    left: 3%;
-    top: 5%;
-    margin: 0 50rem 25rem 0;   
+    right: 3%;
+    bottom: 5%;
+    /* margin: 0 50rem 25rem 0;    */
     display: flex; 
 }
 

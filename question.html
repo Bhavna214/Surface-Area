@@ -20,10 +20,10 @@
     <div class="landing" id="area_test" style="display: none;">
         <h2>Calculate the area:</h2>
         <h3 style="color: aliceblue;">Below are the sides of the cube, calculate the area</h3>
-        <div style="color: aliceblue; font-size:xx-large; align-items:center">
-             3: <input type="text" id="area1"><br>
-             7: <input type="text" id="area2"><br>
-            12: <input type="text" id="area3"><br>
+        <div style="color: aliceblue; font-size: xx-large; align-items:center">
+            <span id="side1"></span>: <input type="text" id="area1"><br><br>
+            <span id="side2"></span>: <input type="text" id="area2"><br><br>
+            <span id="side3"></span>: <input type="text" id="area3"><br><br>
         </div>
         <button onclick="checkarea()">
             ENTER
@@ -32,7 +32,7 @@
 
     <div class="popup" id="popup">
         <div id="instruct">
-            <p id="instruct_p">That's incorrect! Click on the button below to know more about cube.</p>
+            <p id="instruct_p">"That's not the correct answer. To learn more about cubes, click the button below. Understanding cubes and their properties can be fascinating and educational!"</p>
             <a href="cube.html" id="cube">
                 <span></span>
                 <span></span>
@@ -45,30 +45,43 @@
             <img src="./images/character.png" alt="">
         </div>
     </div>
+
+    <script>
+        var side1 = Math.floor(Math.random() * 10) + 1;
+        var side2 = Math.floor(Math.random() * 10) + 1;
+        var side3 = Math.floor(Math.random() * 10) + 1;
+
+        document.getElementById("side1").innerText = side1;
+        document.getElementById("side2").innerText = side2;
+        document.getElementById("side3").innerText = side3;
+
+        function answer(){
+            let answer = document.getElementById("answer").value;
+            if(answer == 6){
+                document.getElementById("sides_test").style.display="none";
+                document.getElementById("area_test").style.display="flex";
+            }
+            else{
+                document.getElementById("popup").style.display="flex";
+            }
+        }
+
+        function checkarea() {
+            var area1 = document.getElementById("area1").value;
+            var area2 = document.getElementById("area2").value;
+            var area3 = document.getElementById("area3").value;
+
+            if (area1 == (side1 * side1) && area2 == (side2 * side2) && area3 == (side3 * side3)) {
+                document.getElementById("popup").style.display = "flex";
+                document.getElementById("instruct_p").innerText = "Great work! You've got the area right, and you're all set with the basics. Keep up the fantastic learning!";
+                document.getElementById("cube").href = "drag.html";
+                document.getElementById("cube").style.display="flex";
+            } else {
+                document.getElementById('popup').style.display = 'flex';
+                document.getElementById("instruct_p").innerText = "Going wrong somewhere? Remember, finding the area of a square on each side of the cube is as easy as multiplying the length of one side by itself - that's the key to solving it!";
+                document.getElementById("cube").style.display="none";
+            }
+        }
+    </script>
 </body>
-<script>
-    function answer(){
-        let answer = document.getElementById("answer").value;
-        if(answer == 6){
-            document.getElementById("sides_test").style.display="none";
-            document.getElementById("area_test").style.display="flex";
-        }
-        else{
-            document.getElementById("popup").style.display="flex";
-        }
-    }
-    function checkarea() {
-        var area1 = document.getElementById("area1").value;
-        var area2 = document.getElementById("area2").value;
-        var area3 = document.getElementById("area3").value;
-        if (area1 == 9 && area2 == 49 && area3 == 144) {
-            document.getElementById("popup").style.display="flex";
-            document.getElementById("instruct_p").innerText="Good Job!";
-            document.getElementById("cube").href="drag.html";
-        } else {
-            document.getElementById('popup').style.display = 'flex';
-            document.getElementById("instruct_p").innerText="Hint: Area = side*side";
-        }
-    }
-</script>
 </html>

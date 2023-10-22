@@ -115,6 +115,7 @@ input {
     position: absolute;
     top: -100px;
     left: 275px;
+    font-weight: 100;
 }
 
 input:focus~ .box #front{

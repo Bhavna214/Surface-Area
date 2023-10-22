@@ -8,10 +8,24 @@
     <link rel="stylesheet" href="./css/landing.css">
 </head>
 <body>
-    <div class="landing">
+    <div class="landing" id="sides_test">
         <h2>Enter the number of faces in a cube:</h2>
-        <input type="text" id="answer">
+        <div>
+            <input type="text" id="answer">
+        </div>
         <button onclick="answer()">
+            ENTER
+        </button>
+    </div>
+    <div class="landing" id="area_test" style="display: none;">
+        <h2>Calculate the area:</h2>
+        <h3 style="color: aliceblue;">Below are the sides of the cube, calculate the area</h3>
+        <div style="color: aliceblue; font-size:xx-large; align-items:center">
+             3: <input type="text" id="area1"><br>
+             7: <input type="text" id="area2"><br>
+            12: <input type="text" id="area3"><br>
+        </div>
+        <button onclick="checkarea()">
             ENTER
         </button>
     </div>
@@ -36,12 +50,24 @@
     function answer(){
         let answer = document.getElementById("answer").value;
         if(answer == 6){
-            document.getElementById("popup").style.display="flex";
-            document.getElementById("instruct_p").innerText="Good Job!";
-            document.getElementById("cube").href="drag.html";
+            document.getElementById("sides_test").style.display="none";
+            document.getElementById("area_test").style.display="flex";
         }
         else{
             document.getElementById("popup").style.display="flex";
+        }
+    }
+    function checkarea() {
+        var area1 = document.getElementById("area1").value;
+        var area2 = document.getElementById("area2").value;
+        var area3 = document.getElementById("area3").value;
+        if (area1 == 9 && area2 == 49 && area3 == 144) {
+            document.getElementById("popup").style.display="flex";
+            document.getElementById("instruct_p").innerText="Good Job!";
+            document.getElementById("cube").href="drag.html";
+        } else {
+            document.getElementById('popup').style.display = 'flex';
+            document.getElementById("instruct_p").innerText="Hint: Area = side*side";
         }
     }
 </script>

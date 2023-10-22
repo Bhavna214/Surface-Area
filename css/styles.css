@@ -10,8 +10,9 @@ body, html{
 .container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     gap: 20px;
+    width: 60%;
 }
 
 .cardboard {

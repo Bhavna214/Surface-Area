@@ -48,6 +48,7 @@ function checkCompletion() {
         const cube = document.querySelector('.box');
         cube.style.display = 'flex';
         document.getElementById("derivation_box").style.display="flex";
+        document.getElementById("before_derivation_box").style.display="none";
     }
 }
 

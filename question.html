@@ -47,9 +47,14 @@
     </div>
 
     <script>
-        var side1 = Math.floor(Math.random() * 10) + 1;
-        var side2 = Math.floor(Math.random() * 10) + 1;
-        var side3 = Math.floor(Math.random() * 10) + 1;
+        var side1, side2, side3;
+
+        do {
+            side1 = Math.floor(Math.random() * 10) + 1;
+            side2 = Math.floor(Math.random() * 10) + 1;
+            side3 = Math.floor(Math.random() * 10) + 1;
+        } while (side1 === side2 || side1 === side3 || side2 === side3);
+
 
         document.getElementById("side1").innerText = side1;
         document.getElementById("side2").innerText = side2;

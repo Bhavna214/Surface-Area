@@ -21,6 +21,24 @@ body{
     color: #a1e2fd;
 }
 
+.conclude{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    /* display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5%;
+    height: 100vh; */
+    margin-bottom: 90%;
+}
+
+.conclude h1{
+    font-size: 3.5rem;
+    font-weight: bolder;
+    color: #a1e2fd;
+}
+
 .landing h2{
     font-size: 3rem;
     font-weight: bolder;

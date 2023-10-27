@@ -61,7 +61,7 @@
     }
     var popup = document.querySelector('#instruct');
     var para = document.createElement('div');
-    para.innerHTML=squaredValue+"+"+squaredValue+"+"+squaredValue+"+"+squaredValue+"+"+squaredValue+"+"+squaredValue + " = " + squaredValue +" *6 "+ " = "+ sideValue+"^2  *6 "+"<br><br>Therefore, surface area of the cube= a^2 * 6";
+    para.innerHTML=squaredValue+"+"+squaredValue+"+"+squaredValue+"+"+squaredValue+"+"+squaredValue+"+"+squaredValue + " = " + squaredValue +" *6 "+ " = "+ sideValue+"^2  *6 "+"<br><br>Therefore, surface area of the cube= a^2 * 6"+ '<br><br><a href="conclude.html">Next</a>';
     para.classList.add('instruct_p');
     popup.appendChild(para);
     localStorage.removeItem('squaredValue'); 

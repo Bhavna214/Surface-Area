@@ -49,6 +49,14 @@ body{
     animation: animate 10s infinite;
     margin-top: 2rem;
 }
+.cubeFormation{
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    margin-top: 2rem;
+}
 
 .card{
     height: 350px;

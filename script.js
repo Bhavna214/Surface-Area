@@ -45,7 +45,7 @@ function checkCompletion() {
         // cardboard.style.animation = 'rotateCube 5s linear infinite';
 
         cardboard.style.display = 'none';
-        const cube = document.querySelector('.box');
+        const cube = document.querySelector('.cubeFormation');
         cube.style.display = 'flex';
         document.getElementById("derivation_box").style.display="flex";
         document.getElementById("before_derivation_box").style.display="none";

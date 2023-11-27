@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Surface Area of Cube</title>
     <link rel="stylesheet" href="./css/landing.css">
 </head>
 <body>
@@ -21,22 +21,22 @@
         </button>
     </div>
     <div class="landing" id="area_test" style="display: none;">
-        <h2>Calculate the area:</h2>
-        <h3 style="color: aliceblue;">Below are the sides of the cube, calculate the area</h3>
+        <h2>Calculate the areas:</h2>
+        <h3 style="color: aliceblue; font-size:x-large">Compute the areas of cubes given their side lengths.</h3>
         <div style="color: aliceblue; font-size: xx-large; align-items:center">
             <span id="side1"></span>: <input type="text" id="area1"><br><br>
             <span id="side2"></span>: <input type="text" id="area2"><br><br>
             <span id="side3"></span>: <input type="text" id="area3"><br><br>
         </div>
-        <button onclick="checkarea()">
+        <button onclick="checkarea()" id="enterButton">
             ENTER
         </button>
     </div>
 
-    <div class="popup" id="popup">
+    <div class="popup" id="popup" style="display: flex;">
         <div id="instruct">
-            <p id="instruct_p">"That's not the correct answer. To learn more about cubes, click the button below. Understanding cubes and their properties can be fascinating and educational!"</p>
-            <a href="cube.html" id="cube">
+            <p id="instruct_p">Let's begin with the basics first.<br>I want to know your knowledge regarding the cube's structure.</p>
+            <a href="cube.html" id="cube" style="display: none;">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -64,13 +64,16 @@
         document.getElementById("side3").innerText = side3;
 
         function answer(){
+            document.getElementById("popup")
             let answer = document.getElementById("answer").value;
             if(answer == 6){
                 document.getElementById("sides_test").style.display="none";
                 document.getElementById("area_test").style.display="flex";
+                document.getElementById("instruct_p").textContent="Now, demonstrate your understanding of the area of square formula. This formula will play a crucial role in our subsequent derivation.";
             }
             else{
-                document.getElementById("popup").style.display="flex";
+                document.getElementById("cube").style.display="flex";
+                document.getElementById("instruct_p").textContent="That's not the correct answer. To learn more about cubes, click the button below.";
             }
         }
 
@@ -81,8 +84,9 @@
 
             if (area1 == (side1 * side1) && area2 == (side2 * side2) && area3 == (side3 * side3)) {
                 document.getElementById("popup").style.display = "flex";
-                document.getElementById("instruct_p").innerText = "Great work! You've got the area right, and you're all set with the basics. Keep up the fantastic learning!";
-                document.getElementById("cube").href = "drag.html";
+                document.getElementById("instruct_p").innerText = "Great work! You've got the areas right, and you're all set with the basics. Keep up the fantastic learning!";
+                document.getElementById("enterButton").style.display = "none";
+                document.getElementById("cube").href = "activityInfo.html";
                 document.getElementById("cube").style.display="flex";
             } else {
                 document.getElementById('popup').style.display = 'flex';

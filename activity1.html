@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surface Area of Cube</title>
+    <link rel="stylesheet" href="./css/landing.css">
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 80%;
+        }
+        
+        td, th {
+          border: 0px;
+          text-align: left;
+          padding: 8px;
+        }
+        </style>
+</head>
+<body>
+    <div class="landing">
+        <h1>SURFACE AREA OF CUBE</h1>
+        <div class="popup" id="activityBox" style="display: flex; width:75%;">
+            <!-- <div class="character">
+                <img src="./images/character.png" alt="">
+            </div> -->
+            <div id="instruct" style="width: fit-content;">
+                <p class="instruct_p"><br>Let's derive the formula for the surface area<br><br><b>Focus on one face:</b><br>
+                </p>
+                <table class="instruct_p">
+                    <tr>
+                      <td>Assume any length of a side for the faces:</td>
+                      <td><input class="derivationTA" type="text" id="sideValue"></td>
+                    </tr>
+                    <tr>
+                      <td>Therefore, the area of the square:</td>
+                      <td><input class="derivationTA" type="text" id="area"></td>
+                    </tr>
+                  </table>
+                <p class="instruct_p" id="areaFormula" style="display: none;">
+                    Area entered is wrong!<br>
+                    Area = side*side
+                </p>
+                <a href="derivation.html">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Continue
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function storeAndRedirect() {
+        var inputValue = document.getElementById('sideValue').value;
+        var squaredValue = parseFloat(inputValue) * parseFloat(inputValue);
+        localStorage.setItem('squaredValue', squaredValue);
+        localStorage.setItem('sideValue', inputValue)
+        console.log('Squared value stored in local storage:', squaredValue); // Add this line to log the squared value
+        location.href = "derivation.html";
+    } 
+    function checkarea() {
+        var areaValue = parseFloat(area.value); // Parse the value to a number
+        var sideInput = parseFloat(sideValue.value); // Parse the value to a number
+        
+        if (!isNaN(areaValue) && areaValue === sideInput * sideInput) {
+            location.href = "derivation.html";
+            storeAndRedirect();
+        } else {
+            document.getElementById('areaFormula').style.display = 'flex';
+        }
+    }
+    area.addEventListener("input", checkarea);
+</script>
+</html>

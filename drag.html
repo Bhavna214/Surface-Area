@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/landing.css">
     <link rel="stylesheet" href="./css/cube.css">
-    <title>Drag & Drop Cube</title>
+    <title>Surface Area of Cube</title>
 </head>
 <body>
     <div class="conclude">
@@ -18,7 +18,9 @@
                 <img src="./images/character.png" alt="">
             </div>
             <div id="instruct">
-                <p class="instruct_p"><br>Get ready for a fun challenge! Use your creativity to drag and arrange the tiles within the outline, crafting a perfect cube.<br></p>
+                <p class="instruct_p"><b>Visualize six squares: </b><br>
+                    Get set for an exciting challenge! <br><br>You'll find six squares on the right side of the screen.
+                    <br><br> Your task is to drag and arrange them inside the outline, crafting a perfect cube.<br></p>
             </div>
         </div>
         <div class="popup" id="derivation_box">
@@ -26,17 +28,25 @@
                 <img src="./images/character.png" alt="">
             </div>
             <div id="instruct" class="Instruct">
-                <p class="instruct_p line "><br>Let's derive the formula for the surface area<br></p>
+                <p class="instruct_p line "></p>
                 <div>
-                    <p class="instruct_p">Enter the length of a side of a face :</p>
-                    <input class="derivationTA" type="text" id="sideValue">
+                    <p class="instruct_p"><b>Assemble the cube: </b><br>Hooray, you've successfully built a cube!</p>
+                    <!-- <p><br>Let's derive the formula for the surface area<br><br>Assume any length of a side for the faces:</p>
+                    <input class="derivationTA" type="text" id="sideValue"> -->
                 </div>
-                <p class="instruct_p">Therefore, the area of the square = </p>
+                <!-- <p class="instruct_p">Therefore, the area of the square = </p>
                 <input class="derivationTA" type="text" id="area">
                 <p class="instruct_p" id="areaFormula" style="display: none;">
                     Area entered is wrong!<br>
                     Area = side*side
-                </p>
+                </p> -->
+                <a href="activity1.html">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Continue
+                </a>
             </div>
             
         </div>
@@ -84,7 +94,7 @@
     
     <script src="script.js"></script>
 </body>
-<script>
+<!-- <script>
     function storeAndRedirect() {
         var inputValue = document.getElementById('sideValue').value;
         var squaredValue = parseFloat(inputValue) * parseFloat(inputValue);
@@ -106,7 +116,7 @@
         }
     }
     area.addEventListener("input", checkarea); 
-</script>
+</script> -->
 <style>
     /* CSS for the outermost grid */
 .outermost-grid {

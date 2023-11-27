@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/landing.css">
     <link rel="stylesheet" href="./css/cube.css">
-    <title>Drag & Drop Cube</title>
+    <title>Surface Area of Cube</title>
 </head>
 <body>
     <div class="conclude">
@@ -17,8 +17,7 @@
             <img src="./images/character.png" alt="">
         </div>
         <div id="instruct">
-            <p class="instruct_p"><br>Let's derive the formula for the surface area<br></p>
-            <p class="instruct_p"><br>Surface area of cube = sum of area of all faces<br></p>
+            <!-- <p class="instruct_p"><br>Surface area of cube = sum of area of all faces<br></p> -->
             <!-- <p class="instruct_p">Therefore, surface area of the cube= a2 * 6</p> -->
         </div>
         
@@ -52,6 +51,14 @@
 
 <script>
     window.onload = function () {
+    function storeAndRedirect() {
+        var squaredValue = localStorage.getItem('squaredValue');
+        var sideValue = localStorage.getItem('sideValue');
+        localStorage.setItem('squaredValue', squaredValue);
+        localStorage.setItem('sideValue', inputValue)
+        console.log('Squared value stored in local storage:', squaredValue); // Add this line to log the squared value
+        location.href = "activity2.html";
+    } 
     var squaredValue = localStorage.getItem('squaredValue');
     var sideValue = localStorage.getItem('sideValue');
     if (squaredValue) {
@@ -64,10 +71,10 @@
     }
     var popup = document.querySelector('#instruct');
     var para = document.createElement('div');
-    para.innerHTML=squaredValue+"+"+squaredValue+"+"+squaredValue+"+"+squaredValue+"+"+squaredValue+"+"+squaredValue + " = " + squaredValue +" *6 "+ " = "+ sideValue+"^2  *6 "+"<br><br>Therefore, surface area of the cube= a^2 * 6"+ '<br><br><a href="conclude.html">Next</a>';
+    para.innerHTML="Similarly, area of all the faces will be "+squaredValue +' unit(s). <a href="activity2.html" onclick="storeAndRedirect()">Continue</a>';
+    
+    <!-- para.innerHTML=squaredValue+"+"+squaredValue+"+"+squaredValue+"+"+squaredValue+"+"+squaredValue+"+"+squaredValue + " = " + squaredValue +" *6 "+ " = "+ sideValue+"^2  *6 "+"<br><br>Therefore, surface area of the cube= a^2 * 6"+ '<br><br><a href="conclude.html">Next</a>'; -->
     para.classList.add('instruct_p');
     popup.appendChild(para);
-    localStorage.removeItem('squaredValue'); 
-    localStorage.removeItem('sideValue');
 };
 </script>

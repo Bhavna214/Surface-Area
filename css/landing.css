@@ -230,6 +230,11 @@ a:hover span:nth-child(4) {
     /* margin: 0 50rem 25rem 0;     */
 }
 
+#activityBox{
+    bottom: 50%;
+    top: 30%;
+}
+
 #before_derivation_box{
     right: 3%;
     /* top: 5%; */

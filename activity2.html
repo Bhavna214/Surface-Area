@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surface Area of Cube</title>
+    <link rel="stylesheet" href="./css/landing.css">
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 80%;
+        }
+        
+        td, th {
+          border: 0px;
+          text-align: left;
+        }
+        </style>
+</head>
+<body>
+    <div class="landing">
+        <h1>SURFACE AREA OF CUBE</h1>
+        <div class="popup" id="activityBox" style="display: flex; width:75%;">
+            <!-- <div class="character">
+                <img src="./images/character.png" alt="">
+            </div> -->
+            <div id="instruct" style="width: fit-content;">
+                <p class="instruct_p"><br>Let's derive the formula for the surface area<br><br>
+                    <b>Calculate total area:</b>
+                    <!-- <br>Surface area of cube = Sum of area of all faces<br> -->
+                </p>   
+                <table class="instruct_p">
+                    <tr>
+                      <td>Surface area of cube</td>
+                      <td>= Sum of area of all faces</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td><p id="instructions"></p></td>
+                    </tr>
+                  </table>   
+                <p class="instructConclusion instruct_p" id="Conclusion" style="text-align: center; font-weight:bold"></p>         
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+    var squaredValue = localStorage.getItem('squaredValue');
+    var sideValue = localStorage.getItem('sideValue');
+    if (squaredValue) {
+        var faceCubes = document.querySelectorAll('.num');
+        faceCubes.forEach(function (element) {
+            var squaredDiv = document.createElement('div');
+            squaredDiv.textContent = squaredValue;
+            element.appendChild(squaredDiv);
+        });
+    }
+    var popup = document.querySelector('#instructions');
+    var para = document.createElement('div');
+    para.innerHTML="= "+squaredValue+" + "+squaredValue+" + "+squaredValue+" + "+squaredValue+" + "+squaredValue+" + "+squaredValue + "<br> = " + squaredValue +" x 6 "+ "<br> = "+ sideValue+"^2 x 6 "+"<br>= 6 x "+sideValue+"^2<br><br>";
+    para.classList.add('instruct_p');
+    popup.appendChild(para);
+    var x = document.querySelector('#Conclusion');
+    var y = document.createElement('div');
+    y.innerHTML="Therefore, surface area of the cube= 6a^2 "+ '<br><br><a href="conclude.html">Next</a>';
+    y.classList.add('instructConclusion');
+    x.appendChild(y);
+    localStorage.removeItem('squaredValue'); 
+    localStorage.removeItem('sideValue');
+};
+</script>
+</html>

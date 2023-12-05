@@ -22,7 +22,7 @@
     </div>
     <div class="landing" id="area_test" style="display: none;">
         <h2>Calculate the areas:</h2>
-        <h3 style="color: aliceblue; font-size:x-large">Compute the areas of cubes given their side lengths.</h3>
+        <h3 style="color: aliceblue; font-size:x-large">Compute the area of squares whose side lengths are given below.</h3>
         <div style="color: aliceblue; font-size: xx-large; align-items:center">
             <span id="side1"></span>: <input type="text" id="area1"><br><br>
             <span id="side2"></span>: <input type="text" id="area2"><br><br>
@@ -69,7 +69,7 @@
             if(answer == 6){
                 document.getElementById("sides_test").style.display="none";
                 document.getElementById("area_test").style.display="flex";
-                document.getElementById("instruct_p").textContent="Now, demonstrate your understanding for the area of square formula. This formula will play a crucial role in our subsequent derivation.";
+                document.getElementById("instruct_p").textContent="Now, demonstrate your understanding for the area of square formula. These are length of sides of 3 different squares, enter their respective areas.";
             }
             else{
                 document.getElementById("cube").style.display="flex";
